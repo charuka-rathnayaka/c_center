@@ -12,6 +12,8 @@ const checkuser=(req,res,next)=>{
             if(err){
                 console.log(err.message);
                 res.locals.user=null;
+                res.locals.usertype=null;
+                res.locals.useremail=null;
                // res.redirect('/login');
                next();
             }else{
@@ -20,21 +22,25 @@ const checkuser=(req,res,next)=>{
                     if(error){
                         console.log(error);
                         res.locals.user=null;
+                        res.locals.usertype=null;
+                        res.locals.useremail=null;
                     }
                    
                     else {
                         console.log("here");
                         console.log(result[0]);
                         let user=result[0].Firstname;
+                        let useremail=result[0].Email;
                         let usertype=decodedToken.usertype;
                         console.log(user);
                         console.log(usertype);
                         res.locals.user=user;
                         res.locals.usertype=usertype;
+                        res.locals.useremail=useremail;
                         return next();
                     }
                 
-                res.locals.user=null;
+                //res.locals.user=null;
             
                // console.log(user);
             
@@ -46,6 +52,8 @@ const checkuser=(req,res,next)=>{
     }else{
         
         res.locals.user=null;
+        res.locals.usertype=null;
+        res.locals.useremail=null;
         next();
     }
 }
