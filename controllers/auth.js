@@ -18,17 +18,19 @@ exports.register=(req,res)=>{
         if(error){
             console.log(error);
         }
-        if(result.length>0){
-            return res.render('register',{
-                message:"That email is already in use"
-            });
+         if(result.length>0){
+            console.log('email already in use');
+            res.locals.details=req.body;
+            res.locals.email_error='email already in use';
+            res.render('register');
 
         }
         else if(password1!=password2){
-            return res.render('register',{
-                message:"Passwords does not match"
-            });
+            res.locals.details=req.body;
+            res.locals.password_error='Passwords need to be the same';
+            res.render('register');
         }
+
 
         let hashedpassword= await bcrypt.hash(password1,8);
         console.log(hashedpassword);
