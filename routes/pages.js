@@ -1,11 +1,10 @@
 const express=require("express");
 const router=express.Router();
 const profileController=require("../controllers/profile");
+const productController=require("../controllers/products");
 
-router.get('/',(req,res)=>{
-    console.log(req.locals);
-    res.render('index');
-});
+
+router.get('/',productController.get_home_new_products);
 
 router.get('/register',(req,res)=>{
     res.render('register');
