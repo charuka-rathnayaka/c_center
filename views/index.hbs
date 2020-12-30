@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,102 +20,152 @@
         <div class="jumbotron">
             <h1 class="display-4">Home</h1>
 
-            <div class="card">
-                <h4>New Arrivals</h4>
-            <div class="card-group">
-            <div class="card">
-                <img src="https://assets.swappie.com/iPhone-X-64GB-Silver-1-1-1-1.png" class="card-img-top" alt="..." width="200" height="280">
-                <div class="card-body">
-                <h5 class="card-title">IphoneX</h5>
-                <p class="card-text">IPhoneX 64 gb processor camera</p>
-                </div>
-                <div class="card-footer">
-                <button>View Details</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.pinoytechnoguide.com/wp-content/uploads/2018/07/Huawei-Nova-3i-300x225.jpg" class="card-img-top" alt="..." width="200" height="280">
-                <div class="card-body">
-                <h5 class="card-title">Huawei Nova 3i</h5>
-                <p class="card-text">6.3-inch FHD+ IPS LCD Display (1080 x 2340 Pixels, 409 ppi)</p>
-                </div>
-                <div class="card-footer">
-                <a class="nav-link" href="/product/1" >View Details</a>
-                <button>View Details</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Xbox-console.jpg/1200px-Xbox-console.jpg" class="card-img-top" alt="..." width="200" height="280">
-                <div class="card-body">
-                <h5 class="card-title">Xbox</h5>
-                <p class="card-text">512 MB of GDDR3 RAM clocked at 700 MHz</p>
-                </div>
-                <div class="card-footer">
-                <button>View Details</button>
-                </div>
-            </div>
-             <div class="card">
-                <img src="https://www.canon-europe.com/media/eos_range_tcm13-1266213.png" class="card-img-top" alt="..." width="200" height="280">
-                <div class="card-body">
-                <h5 class="card-title">Camera</h5>
-                <p class="card-text">512 MB of GDDR3 RAM clocked at 700 MHz</p>
-                </div>
-                <div class="card-footer">
-                <button>View Details</button>
-                </div>
-            </div>
-            </div>
-
-            </div>
-
-<br><br>
-
-             <div class="card">
+                         <div class="card">
                 <h4>Trending</h4>
             <div class="card-group">
-            <div class="card">
-                <img src="https://assets.swappie.com/iPhone-X-64GB-Silver-1-1-1-1.png" class="card-img-top" alt="..." width="200" height="280">
+             <div class="card">
+                <img src={{trend_products.trend_products.product0.image}} class="card-img-top" alt="..." width="200" height="280">
                 <div class="card-body">
-                <h5 class="card-title">IphoneX</h5>
-                <p class="card-text">IPhoneX 64 gb processor camera</p>
+                <h5 class="card-title">{{trend_products.trend_products.product0.name}}</h5>
+                <p class="card-text">{{trend_products.trend_products.product0.desc}}</p>
                 </div>
                 <div class="card-footer">
-                <button>View Details</button>
+                <a class="nav-link" href="/product?464654" >View Details</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.canon-europe.com/media/eos_range_tcm13-1266213.png" class="card-img-top" alt="..." width="200" height="280">
+                <img src={{trend_products.trend_products.product1.image}} class="card-img-top" alt="..." width="200" height="280">
                 <div class="card-body">
-                <h5 class="card-title">IphoneX</h5>
-                <p class="card-text">IPhoneX 64 gb processor camera</p>
+                <h5 class="card-title">{{trend_products.trend_products.product1.name}}</h5>
+                <p class="card-text">{{trend_products.trend_products.product1.desc}}</p>
                 </div>
                 <div class="card-footer">
-                <button>View Details</button>
+                <a class="nav-link" href="/product?464654" >View Details</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://www.pinoytechnoguide.com/wp-content/uploads/2018/07/Huawei-Nova-3i-300x225.jpg" class="card-img-top" alt="..." width="200" height="280">
+                <img src={{trend_products.trend_products.product2.image}} class="card-img-top" alt="..." width="200" height="280">
                 <div class="card-body">
-                <h5 class="card-title">Huawei Nova 3i</h5>
-                <p class="card-text">6.3-inch FHD+ IPS LCD Display (1080 x 2340 Pixels, 409 ppi)</p>
+                <h5 class="card-title">{{trend_products.trend_products.product2.name}}</h5>
+                <p class="card-text">{{trend_products.trend_products.product2.desc}}</p>
                 </div>
                 <div class="card-footer">
-                <button>View Details</button>
+                <a class="nav-link" href="/product?464654" >View Details</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Xbox-console.jpg/1200px-Xbox-console.jpg" class="card-img-top" alt="..." width="200" height="280">
+                <img src={{trend_products.trend_products.product3.image}} class="card-img-top" alt="..." width="200" height="280">
                 <div class="card-body">
-                <h5 class="card-title">Xbox</h5>
-                <p class="card-text">512 MB of GDDR3 RAM clocked at 700 MHz</p>
+                <h5 class="card-title">{{trend_products.trend_products.product3.name}}</h5>
+                <p class="card-text">{{trend_products.trend_products.product3.desc}}</p>
                 </div>
                 <div class="card-footer">
-                <button>View Details</button>
+                <a class="nav-link" href="/product?464654" >View Details</a>
                 </div>
             </div>
             </div>
 
              </div>
+             <br><br>
+
+            <div class="card">
+                <h4>New Arrivals</h4>
+            <div class="card-group">
+            <div class="card">
+                <img src={{new_products.new_products.product0.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product0.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product0.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+             <div class="card">
+                <img src={{new_products.new_products.product1.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product1.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product1.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+              <div class="card">
+                <img src={{new_products.new_products.product2.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product2.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product2.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+              <div class="card">
+                <img src={{new_products.new_products.product3.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product3.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product3.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+             
+            </div>
+
+
+
+             <div class="card-group">
+            <div class="card">
+                <img src={{new_products.new_products.product4.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product4.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product4.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+             <div class="card">
+                <img src={{new_products.new_products.product5.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product5.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product5.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+              <div class="card">
+                <img src={{new_products.new_products.product6.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product6.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product6.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+              <div class="card">
+                <img src={{new_products.new_products.product7.image}} class="card-img-top" alt="..." width="200" height="280">
+                <div class="card-body">
+                <h5 class="card-title">{{new_products.new_products.product7.name}}</h5>
+                <p class="card-text">{{new_products.new_products.product7.desc}}</p>
+                </div>
+                <div class="card-footer">
+                <a class="nav-link" href="/product?464654" >View Details</a>
+                </div>
+            </div>
+             
+            </div>
+
+
+            </div>
+
+<br><br>
+
+
            
         </div>
     </div>
