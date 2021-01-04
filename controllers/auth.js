@@ -11,6 +11,7 @@ const db=mysql.createConnection({
 
 const db=require('../database/database_server.js');
 exports.register=(req,res)=>{
+    res.cookie("guest_jwt",'',{maxAge:1});
     console.log(req.body);
     
     const {firstname,lastname,email,address,city,birthday,contactnumber,password1,password2}=req.body;
@@ -65,6 +66,8 @@ exports.register=(req,res)=>{
 }
 
 exports.login=async (req,res)=>{
+    //cookies.set('guest_jwt', {maxAge: 0});
+    res.cookie("guest_jwt",'',{maxAge:1});
     try {
         console.log(req.body);
         const email=req.body.email;
@@ -113,5 +116,9 @@ exports.login=async (req,res)=>{
 
 exports.logout=(req,res)=>{
     res.cookie("jwt",'',{maxAge:1});
+    user=null;
+    usertype=null;
+    useremail=null;
+    console.log('useremail null');
     res.redirect('/');
 }
