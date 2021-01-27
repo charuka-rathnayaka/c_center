@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href='/style.css'>
+    <title>HOME</title>
+</head>
+
+<body>
+    {{> header }}
+    {{> navigation }}
+    <div class="col-md-3">
+        <form class="needs-validation" action="/order" method="POST">
+            <label for="validationCustom04" class="form-label">Delivary Method</label>
+            <select class="form-select" id="validationCustom04" name='delieveryMethod' required
+                value={{details.delieveryMethod}} disabled="true">
+                <option selected disabled value="">Choose...</option>
+                <option value='Pickup'>Pickup</option>
+                <option value='Delievery'>Delievery</option>
+
+            </select>
+            <div class="invalid-feedback">
+                Please select the Delivary method.
+            </div>
+            <button class="btn btn-primary" type="submit"> Next </button>
+        </form>
+    </div>
+    <script>
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+
+    </script>
+</body>
+
+</html>

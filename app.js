@@ -54,7 +54,9 @@ app.use('*',checkuser);
 //console.log(user);
 app.use('/',require("./routes/pages"));
 
-app.use("/auth",require("./routes/auth"));
+app.use("/auth", require("./routes/auth"));
+
+app.use("/order",require("./routes/order"));
 //app.get('*',checkuser);
 
 //app.use("/product",require("./routes/product"));
