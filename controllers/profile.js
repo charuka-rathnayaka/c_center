@@ -5,7 +5,7 @@ const db=require('../database/database_server.js');
 
 exports.get_profile=(req,res)=>{
     const token=req.cookies.jwt;
-    
+    console.log(req.body);
     if(token){
         jwt.verify(token,process.env.JWT_SECRET,async (err,decodedToken)=>{
         
